@@ -19,7 +19,7 @@ In Xcode, use **File > Add Package Dependencies** and enter:
 https://github.com/vifudotdev/VifuGodot
 ```
 
-Select version `0.1.9` or newer and add the `VifuGodot` product to the app
+Select version `0.1.10` or newer and add the `VifuGodot` product to the app
 target. SwiftPM resolves the matching Vifu Runtime, maintained SwiftGodot SDK,
 and platform libgodot binary from that single package dependency.
 
@@ -29,7 +29,7 @@ The package manifest resolves the maintained Git dependencies by default:
 
 | Package | Requirement |
 | --- | --- |
-| Vifu Agent Runtime | `vifudotdev/vifu`, version `0.1.9` |
+| Vifu Agent Runtime | `vifudotdev/vifu`, version `0.1.10` |
 | SwiftGodotKit | `vifudotdev/SwiftGodotKit`, version `4.5.1-vifu.1` |
 | SwiftGodot | `vifudotdev/SwiftGodot`, version `4.5.1-vifu.1` |
 | libgodot | Vifu release `libgodot-4.5.1-vifu.1`, selected for iOS or macOS by SwiftPM |
@@ -140,7 +140,8 @@ sequence is:
    `publish=true` only after the draft is ready;
 4. verify that the checksums pinned in `Package.swift` match the published
    assets and run a clean remote SwiftPM resolution;
-5. publish the VifuGodot source package tag.
+5. tag the matching Vifu release; its release workflow publishes the exact
+   VifuGodot subtree and matching semantic tag through the release GitHub App.
 
 SwiftPM does not select a nested package by subdirectory from a Git URL. This
 directory remains the implementation source inside Vifu and is published as a
