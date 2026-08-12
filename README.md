@@ -19,7 +19,7 @@ In Xcode, use **File > Add Package Dependencies** and enter:
 https://github.com/vifudotdev/VifuGodot
 ```
 
-Select version `0.1.11` or newer and add the `VifuGodot` product to the app
+Select version `0.1.12` or newer and add the `VifuGodot` product to the app
 target. SwiftPM resolves the matching Vifu Runtime, maintained SwiftGodot SDK,
 and platform libgodot binary from that single package dependency.
 
@@ -29,7 +29,7 @@ The package manifest resolves the maintained Git dependencies by default:
 
 | Package | Requirement |
 | --- | --- |
-| Vifu Agent Runtime | `vifudotdev/vifu`, version `0.1.11` |
+| Vifu Agent Runtime | `vifudotdev/vifu`, version `0.1.12` |
 | SwiftGodotKit | `vifudotdev/SwiftGodotKit`, version `4.5.1-vifu.1` |
 | SwiftGodot | `vifudotdev/SwiftGodot`, version `4.5.1-vifu.1` |
 | libgodot | Vifu release `libgodot-4.5.1-vifu.1`, selected for iOS or macOS by SwiftPM |
@@ -164,5 +164,5 @@ VIFU_GODOT_MACOS_LIBGODOT_PATH=".build/libgodot/mac_libgodot.xcframework" \
 
 The focused tests use a fake Godot host to verify bidirectional frames,
 reconnection, and disconnection. Build the
-[`godot-ios-embedding`](../../../examples/godot-ios-embedding/) example on a
+[`godot-ios-starter`](../../../examples/godot-ios-starter/) example on a
 physical device to validate the libgodot runtime and rendering boundary.
